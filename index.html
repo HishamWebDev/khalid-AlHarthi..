@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- icon logo  -->
+    <link rel="icon" href="./1.jpeg" />
+    <!-- <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> -->
+    <!-- fontawsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- <link rel="stylesheet" href="./all.min.css"> -->
+    <!-- style css  -->
+    <link rel="stylesheet" href="./css.css">
+    <title>khalid AlHarthi</title>
+</head>
+
+<body>
+
+    <div id="preloader"></div>
+    <header class="container">
+        <div class="page-header">
+            <label class="mode x">
+                <input type="checkbox" id="darkModeToggle">
+                <i class="fa-solid fa-moon"></i>
+            </label>
+            <a href="./index.html" target="_blank" style="--socialAni:5"><i
+                    class="fa-solid fa-arrow-up-from-bracket"></i></a>
+        </div>
+    </header>
+    <section class="container">
+        <div class="main">
+            <div class="detail">
+                <h3>Hi, Welcome Here</h3>
+                <h1>I'm <span style="color:#f9532d;">khalid AlHarthi</span></h1>
+                <p>Hospitality Pioneer Co.
+                </p>
+                <div class="social">
+                    <a href="https://wa.me/966530463333" target="_blank"><i class="fa-brands fa-whatsapp fa-xs"></i></a>
+                    <a href="chairman@hpc-hospitality.com" target="_blank" style="--socialAni:2"><i
+                            class="fa-solid fa-envelope fa-xs"></i></a>
+                    <a href="https://www.youtube.com/watch?v=3XjEGZeEPpg&t=136s" target="_blank"
+                        style="--socialAni:3"><i class='fa-brands fa-youtube fa-xs'></i></a>
+                    <a href="https://www.hpc-hospitality.com/" target="_blank" style="--socialAni:4"><i
+                            class="fa-solid fa-link fa-xs"></i></a>
+                    <a href="https://maps.app.goo.gl/Vhpfj3APNA9LSktT6?g_st=iw" target="_blank" style="--socialAni:5"><i
+                            class="fa-solid fa-location-dot fa-xs"></i></a>
+                </div>
+            </div>
+            <div class="img-sec">
+                <div class="images">
+                    <img src="./1.jpeg" alt="" class="img-w">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+        // START DARK MOOD
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+        const isDarkMode = localStorage.getItem('darkMode') === 'enabled';
+        if (isDarkMode) {
+            body.classList.add('dark-mode');
+            darkModeToggle.checked = true;
+        }
+        darkModeToggle.addEventListener('change', () => {
+            if (darkModeToggle.checked) {
+                body.classList.add('dark-mode');
+                localStorage.setItem('darkMode', 'enabled');
+            } else {
+                body.classList.remove('dark-mode');
+                localStorage.setItem('darkMode', 'disabled');
+            }
+        });
+        // END DARK MOOD
+        // START LOADER PAGE
+        var loader = document.getElementById("preloader");
+
+        window.addEventListener("load", function () {
+            setTimeout(function () {
+                loader.style.display = "none";
+            }, 3000);
+        });
+        // END LOADER PAGE
+
+
+    </script>
+
+</body>
+
+</html>
